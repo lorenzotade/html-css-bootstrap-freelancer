@@ -3,6 +3,36 @@ html {
   scroll-behavior: smooth;
 }
 
+.satana {
+  position: relative;
+  font-size: 18px;
+}
+
+.satana.lt-bg-white::before,
+.satana.lt-bg-white::after {
+  background-color: #FFF;
+}
+
+.satana::before {
+  content: '';
+  position: absolute;
+  left: 27%;
+  width: 20%;
+  height: 3px;
+  margin-top: 8px;
+  background-color: #000;
+}
+
+.satana::after {
+  content: '';
+  position: absolute;
+  right: 27%;
+  width: 20%;
+  height: 3px;
+  margin-top: 8px;
+  background-color: #000;
+}
+
 .lt-padding-50 {
   padding: 50px;
 }
@@ -16,12 +46,17 @@ html {
   margin-bottom:20px;
 }
 
-.text-white {
+.lt-text-white {
   color: #FFF;
 }
 
 .lt-light-green {
   background-color: #15BC9C;
+}
+
+.btn:hover {
+  background-color: #15BC9C;
+  opacity: 0.8;
 }
 
 .lt-header-top .navbar-default a:hover,
@@ -61,12 +96,12 @@ h2 {
   text-transform: uppercase;
 }
 
-.lt-header-top nav .collapse ul li a{
+.lt-header-top nav .collapse ul li a {
   text-decoration: none;
   font-size: 14px;
   margin-top: 10px;
   text-transform: uppercase;
-  color: #FFF;
+  color:#FFF
 }
 
 .lt-header-top nav button.navbar-toggle {
@@ -86,12 +121,8 @@ h2 {
   background-color: #15BC9C;
 }
 
-.lt-header-top nav .collapse {
-  background-color: #FFF;
-}
-
-.lt-header-top nav .navbar-collapse ul li a {
-  color:#2C3D50;
+.lt-header-top nav .collapse.navbar-collapse {
+  background-color: #2C3D50;
 }
 
 .lt-header-bottom {
@@ -107,6 +138,7 @@ h2 {
 .lt-jumbotron .lt-jumbo-img {
   width: 150px;
   height: 150px;
+  margin-top: 30px;
   display: inline-block;
 }
 
@@ -127,7 +159,6 @@ main #portfolio .lt-box img{
 }
 
 main .btn.btn-success {
-  background-color: #15BC9C;
   border-color: #FFF;
   margin-top: 5px;
 }
@@ -145,7 +176,7 @@ main #contact form textarea {
   padding-bottom: 100px;
 }
 
-main #contact [placeholder] {
+::placeholder {
   color: #000;
 }
 /* /MAIN */
